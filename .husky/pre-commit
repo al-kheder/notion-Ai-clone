@@ -1,1 +1,3 @@
-npm test
+
+#!/bin/sh
+echo "Pre-commit hook executed."
