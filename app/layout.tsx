@@ -1,7 +1,13 @@
 import type { Metadata } from 'next';
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs';
 import './globals.css';
-
-
+import Header from '@/components/ui/Header';
 
 export const metadata: Metadata = {
   title: 'Notion-Clone',
@@ -14,8 +20,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+         <Header/>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
