@@ -11,11 +11,11 @@ import {
 function Header() {
   const { user } = useUser();
   return (
-    <div className="flex justify-between p-4">
+    <div className="flex justify-between items-center p-5">
       <div>
         {user ? (
           <div>
-            <p>Hi {user.fullName}</p>
+            <h1 className='text-2xl'>Hi {user.fullName}</h1>
           </div>
         ) : (
           <div>
